@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Network Communication Portfolio</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <header class="hero">
+      <h1>Network Communication Portfolio</h1>
+      <p>Socket programming projects with interactive algorithm demos.</p>
+    </header>
+
+    <main class="container">
+      <section>
+        <h2>Projects</h2>
+        <div class="grid">
+          <article class="card">
+            <h3>UDP Chat</h3>
+            <p>Connectionless chat request/reply flow using UDP datagrams.</p>
+            <a href="../projects/udp-chat/README.md">Open docs</a>
+          </article>
+          <article class="card">
+            <h3>UDP Echo</h3>
+            <p>Classic message echo service on UDP.</p>
+            <a href="../projects/udp-echo/README.md">Open docs</a>
+          </article>
+          <article class="card">
+            <h3>TCP Even Parity</h3>
+            <p>Bit-level parity validation over a TCP connection.</p>
+            <a href="../projects/tcp-even-parity/README.md">Open docs</a>
+          </article>
+          <article class="card">
+            <h3>TCP CRC</h3>
+            <p>Server computes CRC8 checksum for received payloads.</p>
+            <a href="../projects/tcp-crc/README.md">Open docs</a>
+          </article>
+        </div>
+      </section>
+
+      <section class="demo">
+        <h2>Interactive Demos (Browser)</h2>
+        <p>These demos run on GitHub Pages. Socket servers still run locally.</p>
+
+        <div class="card">
+          <h3>Checksum Demo</h3>
+          <label for="checksum-input">Blocks (space separated bitstrings)</label>
+          <input id="checksum-input" value="1010 0101 1111" />
+          <button id="checksum-btn">Compute Checksum</button>
+          <p id="checksum-output"></p>
+        </div>
+
+        <div class="card">
+          <h3>Even Parity Demo</h3>
+          <label for="parity-input">Bitstring</label>
+          <input id="parity-input" value="101010" />
+          <button id="parity-btn">Check Parity</button>
+          <p id="parity-output"></p>
+        </div>
+      </section>
+    </main>
+
+    <script src="./scripts.js"></script>
+  </body>
+</html>
