@@ -43,3 +43,11 @@ Raw socket servers cannot run on GitHub Pages. This repository solves that by:
 - Add demo GIFs under `assets/`.
 - Expand protocol notes in `docs/`.
 - Add more integration tests.
+
+## License
+
+This project is licensed under the [MIT License](LICENSE). 
+<br><br> Copyright (c) 2026 <br>
+<img src="name-geo4.avif" alt="Logo" width="600"/>  <br> <br>
+[![License](https://img.shields.io/github/license/vermashaurya/network-communication)](LICENSE) <br>
+Feel free to take inspiration. <br>Happy Coding!   
