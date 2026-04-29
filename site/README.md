@@ -1,17 +1,21 @@
-# GitHub Pages Site
+# NetLab Static Site
 
-Static showcase entrypoint for this repository.
+Browser-facing showcase for the repository.
+
+## What It Contains
+
+- `index.html`: product-style landing page with project overview and interactive demos.
+- `projects/*.html`: browser-ready documentation pages for each experiment.
+- `scripts.js`: checksum and parity demo logic.
+- `styles.css`: shared visual system for the landing page and project pages.
+
+## Why The Project Pages Exist
+
+Static sites should route users to HTML documents, not raw Markdown files from the source tree.
+The project cards therefore link to pages under `site/projects/` instead of `projects/*/README.md`.
 
 ## Local Preview
-
-Open `site/index.html` directly in a browser, or serve with a static server:
 
 ```bash
 python -m http.server 8080 --directory site
 ```
-
-## Deploy
-
-- Ensure default branch is `main`.
-- Enable GitHub Pages source as **GitHub Actions**.
-- The workflow `.github/workflows/pages.yml` deploys the `site/` folder.

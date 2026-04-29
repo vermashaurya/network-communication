@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>UDP Chat | NetLab</title>
+    <meta
+      name="description"
+      content="Documentation page for the UDP Chat experiment in the NetLab repository."
+    />
+    <link rel="stylesheet" href="../styles.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="container nav">
+        <a class="brand" href="../index.html">NetLab</a>
+        <nav class="nav-links" aria-label="Primary">
+          <a href="../index.html#projects">Projects</a>
+          <a href="../index.html#workspace">Workspace</a>
+          <a href="../index.html#notes">Notes</a>
+        </nav>
+      </div>
+    </header>
+
+    <main class="page-shell">
+      <div class="container">
+        <a class="breadcrumb" href="../index.html">Home</a>
+        <section class="page-hero">
+          <p class="eyebrow">UDP experiment</p>
+          <h1>UDP Chat</h1>
+          <p class="page-lead">
+            A simple request and reply chat flow built on connectionless datagrams. It is meant to
+            demonstrate how UDP exchanges messages without maintaining a session.
+          </p>
+        </section>
+
+        <div class="detail-grid">
+          <div>
+            <div class="detail-highlights">
+              <article class="detail-callout">
+                <p class="eyebrow">Purpose</p>
+                <h2>Message round trips</h2>
+                <p>Observe how the server responds to each inbound datagram without a persistent connection.</p>
+              </article>
+              <article class="detail-callout">
+                <p class="eyebrow">Best for</p>
+                <h2>Protocol basics</h2>
+                <p>Useful as an early lab for socket APIs, packet flow, and lightweight request handling.</p>
+              </article>
+            </div>
+
+            <article class="detail-panel">
+              <p class="eyebrow">How it works</p>
+              <ul class="detail-list">
+                <li>The client sends a message over UDP.</li>
+                <li>The server receives the datagram and prepares a reply.</li>
+                <li>The response contains the original payload with a simple server prefix.</li>
+              </ul>
+            </article>
+
+            <article class="detail-panel">
+              <p class="eyebrow">Run locally</p>
+              <pre><code>python projects/udp-chat/server.py
+python projects/udp-chat/client.py</code></pre>
+            </article>
+          </div>
+
+          <aside>
+            <article class="detail-panel">
+              <p class="eyebrow">Project facts</p>
+              <ul class="project-specs">
+                <li><strong>Protocol:</strong> UDP</li>
+                <li><strong>Intent:</strong> request and reply messaging</li>
+                <li><strong>Source docs:</strong> `projects/udp-chat/README.md`</li>
+              </ul>
+            </article>
+
+            <article class="detail-panel">
+              <p class="eyebrow">What the broken link was supposed to be</p>
+              <p>
+                This card should open a readable documentation page for the UDP Chat project. It
+                previously linked to the raw project README instead.
+              </p>
+            </article>
+          </aside>
+        </div>
+      </div>
+    </main>
+  </body>
+</html>

@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Checksum Lab | NetLab</title>
+    <meta
+      name="description"
+      content="Documentation page for the Checksum Lab utility in the NetLab repository."
+    />
+    <link rel="stylesheet" href="../styles.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="container nav">
+        <a class="brand" href="../index.html">NetLab</a>
+        <nav class="nav-links" aria-label="Primary">
+          <a href="../index.html#projects">Projects</a>
+          <a href="../index.html#workspace">Workspace</a>
+          <a href="../index.html#notes">Notes</a>
+        </nav>
+      </div>
+    </header>
+
+    <main class="page-shell">
+      <div class="container">
+        <a class="breadcrumb" href="../index.html">Home</a>
+        <section class="page-hero">
+          <p class="eyebrow">Algorithm utility</p>
+          <h1>Checksum Lab</h1>
+          <p class="page-lead">
+            A command-line checksum utility for one&apos;s-complement addition across equal-width
+            bit blocks. This is also the logic behind the checksum demo on the homepage.
+          </p>
+        </section>
+
+        <div class="detail-grid">
+          <div>
+            <div class="detail-highlights">
+              <article class="detail-callout">
+                <p class="eyebrow">Browser tie-in</p>
+                <h2>Shared demo logic</h2>
+                <p>The interactive checksum lab in the site mirrors the same idea used by the CLI utility.</p>
+              </article>
+              <article class="detail-callout">
+                <p class="eyebrow">Primary use</p>
+                <h2>Algorithm verification</h2>
+                <p>Useful when you want to validate checksum behavior independently of socket code.</p>
+              </article>
+            </div>
+
+            <article class="detail-panel">
+              <p class="eyebrow">Run locally</p>
+              <pre><code>python projects/checksum-lab/cli.py 1010 0101 1111</code></pre>
+            </article>
+
+            <article class="detail-panel">
+              <p class="eyebrow">Why it belongs in the site</p>
+              <ul class="detail-list">
+                <li>It makes the browser demo feel grounded in actual project logic.</li>
+                <li>It provides a non-network entry point for understanding error-detection steps.</li>
+                <li>It closes the gap between the static site and the Python implementation.</li>
+              </ul>
+            </article>
+          </div>
+
+          <aside>
+            <article class="detail-panel">
+              <p class="eyebrow">Project facts</p>
+              <ul class="project-specs">
+                <li><strong>Type:</strong> local CLI utility</li>
+                <li><strong>Input:</strong> equal-width binary blocks</li>
+                <li><strong>Intent:</strong> checksum exploration and validation</li>
+              </ul>
+            </article>
+
+            <article class="detail-panel">
+              <p class="eyebrow">What the card should do</p>
+              <p>
+                It should route to this project page and explain the checksum utility clearly inside
+                the site. The old homepage did not expose this project at all.
+              </p>
+            </article>
+          </aside>
+        </div>
+      </div>
+    </main>
+  </body>
+</html>

@@ -3,63 +3,178 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Network Communication Portfolio</title>
+    <title>NetLab | Socket</title>
+    <meta
+      name="description"
+      content="A polished static showcase for socket programming projects, protocol notes, and interactive error-detection demos."
+    />
     <link rel="stylesheet" href="./styles.css" />
   </head>
   <body>
-    <header class="hero">
-      <h1>Network Communication Portfolio</h1>
-      <p>Socket programming projects with interactive algorithm demos.</p>
+    <header class="site-header">
+      <div class="container nav">
+        <a class="brand" href="./index.html">NetLab</a>
+        <nav class="nav-links" aria-label="Primary">
+          <a href="#projects">Projects</a>
+          <a href="#workspace">Workspace</a>
+          <a href="#notes">Notes</a>
+        </nav>
+      </div>
     </header>
 
-    <main class="container">
-      <section>
-        <h2>Projects</h2>
-        <div class="grid">
-          <article class="card">
-            <h3>UDP Chat</h3>
-            <p>Connectionless chat request/reply flow using UDP datagrams.</p>
-            <a href="../projects/udp-chat/README.md">Open docs</a>
-          </article>
-          <article class="card">
-            <h3>UDP Echo</h3>
-            <p>Classic message echo service on UDP.</p>
-            <a href="../projects/udp-echo/README.md">Open docs</a>
-          </article>
-          <article class="card">
-            <h3>TCP Even Parity</h3>
-            <p>Bit-level parity validation over a TCP connection.</p>
-            <a href="../projects/tcp-even-parity/README.md">Open docs</a>
-          </article>
-          <article class="card">
-            <h3>TCP CRC</h3>
-            <p>Server computes CRC8 checksum for received payloads.</p>
-            <a href="../projects/tcp-crc/README.md">Open docs</a>
-          </article>
+    <main>
+      <section class="hero">
+        <div class="container hero-grid">
+          <div class="hero-copy">
+            <p class="eyebrow">Static showcase for runnable socket projects</p>
+            <h1>Network communication demos that explain the protocol, not just the code.</h1>
+            <p class="hero-text">
+              NetLab packages Python socket exercises and browser-side algorithm demos into a
+              clearer portfolio. Read how each workflow behaves, run the matching server and
+              client locally, and use the interactive lab to validate parity and checksum logic.
+            </p>
+            <div class="hero-actions">
+              <a class="button button-primary" href="#workspace">Explore workspace</a>
+              <a class="button button-secondary" href="./projects/udp-echo.html">View a sample project</a>
+            </div>
+          </div>
+          <aside class="hero-panel">
+            <p class="panel-label">Included in this repo</p>
+            <ul class="metric-list">
+              <li>
+                <strong>5</strong>
+                <span>guided experiments</span>
+              </li>
+              <li>
+                <strong>2</strong>
+                <span>interactive browser demos</span>
+              </li>
+              <li>
+                <strong>1</strong>
+                <span>clean path from docs to runnable code</span>
+              </li>
+            </ul>
+          </aside>
         </div>
       </section>
 
-      <section class="demo">
-        <h2>Interactive Demos (Browser)</h2>
-        <p>These demos run on GitHub Pages. Socket servers still run locally.</p>
+      <section class="section" id="workspace">
+        <div class="container split-layout">
+          <div class="surface" id="projects">
+            <div class="surface-heading">
+              <div>
+                <p class="eyebrow">Project library</p>
+                <h2>Runnables and documentation</h2>
+              </div>
+              <p class="surface-copy">
+                Each card now opens a browser-ready project brief with local run commands, protocol
+                notes, and the intended use case.
+              </p>
+            </div>
 
-        <div class="card">
-          <h3>Checksum Demo</h3>
-          <label for="checksum-input">Blocks (space separated bitstrings)</label>
-          <input id="checksum-input" value="1010 0101 1111" />
-          <button id="checksum-btn">Compute Checksum</button>
-          <p id="checksum-output"></p>
+            <div class="card-grid">
+              <article class="project-card">
+                <span class="project-tag">UDP</span>
+                <h3>UDP Chat</h3>
+                <p>Packet-based request and reply flow with a lightweight chat interaction.</p>
+                <a href="./projects/udp-chat.html">Open docs</a>
+              </article>
+              <article class="project-card">
+                <span class="project-tag">UDP</span>
+                <h3>UDP Echo</h3>
+                <p>Single-purpose echo service for verifying datagram transport and round trips.</p>
+                <a href="./projects/udp-echo.html">Open docs</a>
+              </article>
+              <article class="project-card">
+                <span class="project-tag">TCP</span>
+                <h3>TCP Even Parity</h3>
+                <p>Bitstring transmission with parity-bit generation and server-side validation.</p>
+                <a href="./projects/tcp-even-parity.html">Open docs</a>
+              </article>
+              <article class="project-card">
+                <span class="project-tag">TCP</span>
+                <h3>TCP CRC</h3>
+                <p>CRC8 checksum service that returns a response for each received payload.</p>
+                <a href="./projects/tcp-crc.html">Open docs</a>
+              </article>
+              <article class="project-card">
+                <span class="project-tag">Algorithm</span>
+                <h3>Checksum Lab</h3>
+                <p>Standalone checksum utility for verifying one&apos;s-complement addition logic.</p>
+                <a href="./projects/checksum-lab.html">Open docs</a>
+              </article>
+            </div>
+          </div>
+
+          <div class="surface surface-accent">
+            <div class="surface-heading">
+              <div>
+                <p class="eyebrow">Interactive lab</p>
+                <h2>Browser-side algorithm checks</h2>
+              </div>
+              <p class="surface-copy">
+                This stays side by side with the project catalog on larger screens and stacks on
+                mobile. The lab is lightweight, useful, and intentionally restrained.
+              </p>
+            </div>
+
+            <div class="demo-stack">
+              <section class="demo-card">
+                <h3>Checksum Demo</h3>
+                <p>Enter equal-width blocks separated by spaces.</p>
+                <label for="checksum-input">Bit blocks</label>
+                <input id="checksum-input" value="1010 0101 1111" />
+                <button id="checksum-btn" type="button">Compute checksum</button>
+                <p class="demo-output" id="checksum-output" aria-live="polite"></p>
+              </section>
+
+              <section class="demo-card">
+                <h3>Even Parity Demo</h3>
+                <p>Check whether a bitstring currently has even parity.</p>
+                <label for="parity-input">Bitstring</label>
+                <input id="parity-input" value="101010" />
+                <button id="parity-btn" type="button">Validate parity</button>
+                <p class="demo-output" id="parity-output" aria-live="polite"></p>
+              </section>
+            </div>
+          </div>
         </div>
+      </section>
 
-        <div class="card">
-          <h3>Even Parity Demo</h3>
-          <label for="parity-input">Bitstring</label>
-          <input id="parity-input" value="101010" />
-          <button id="parity-btn">Check Parity</button>
-          <p id="parity-output"></p>
+      <section class="section section-muted" id="notes">
+        <div class="container note-grid">
+          <article class="note-card">
+            <p class="eyebrow">How it is meant to be used</p>
+            <h2>Local sockets, static presentation</h2>
+            <p>
+              The site explains the projects and lets the algorithms be explored in the browser,
+              but the actual TCP and UDP socket services still run locally in Python.
+            </p>
+          </article>
+          <article class="note-card">
+            <p class="eyebrow">Quick start</p>
+            <h2>Run a server and its client</h2>
+            <pre><code>python projects/udp-echo/server.py
+python projects/udp-echo/client.py</code></pre>
+          </article>
+          <article class="note-card">
+            <p class="eyebrow">Repository model</p>
+            <h2>One repo, separate surfaces</h2>
+            <p>
+              Python modules under `projects/` carry the networking behavior. Files under `site/`
+              provide the browser-facing product layer and project documentation.
+            </p>
+          </article>
         </div>
       </section>
     </main>
+
+    <footer class="site-footer">
+      <div class="container footer-inner">
+        <p>NetLab is a static portfolio layer for the network communication repository.</p>
+        <a href="./projects/checksum-lab.html">Open algorithm docs</a>
+      </div>
+    </footer>
 
     <script src="./scripts.js"></script>
   </body>

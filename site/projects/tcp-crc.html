@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TCP CRC | NetLab</title>
+    <meta
+      name="description"
+      content="Documentation page for the TCP CRC experiment in the NetLab repository."
+    />
+    <link rel="stylesheet" href="../styles.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="container nav">
+        <a class="brand" href="../index.html">NetLab</a>
+        <nav class="nav-links" aria-label="Primary">
+          <a href="../index.html#projects">Projects</a>
+          <a href="../index.html#workspace">Workspace</a>
+          <a href="../index.html#notes">Notes</a>
+        </nav>
+      </div>
+    </header>
+
+    <main class="page-shell">
+      <div class="container">
+        <a class="breadcrumb" href="../index.html">Home</a>
+        <section class="page-hero">
+          <p class="eyebrow">TCP experiment</p>
+          <h1>TCP CRC</h1>
+          <p class="page-lead">
+            A checksum-oriented TCP service where the client sends a payload and the server responds
+            with a CRC8 result using the `0x07` polynomial.
+          </p>
+        </section>
+
+        <div class="detail-grid">
+          <div>
+            <div class="detail-highlights">
+              <article class="detail-callout">
+                <p class="eyebrow">Algorithm</p>
+                <h2>CRC8</h2>
+                <p>Moves beyond parity by demonstrating a stronger error-detection technique.</p>
+              </article>
+              <article class="detail-callout">
+                <p class="eyebrow">Test vector</p>
+                <h2>Known correctness check</h2>
+                <p>The repository tests the standard ASCII `123456789` CRC8 result.</p>
+              </article>
+            </div>
+
+            <article class="detail-panel">
+              <p class="eyebrow">Run locally</p>
+              <pre><code>python projects/tcp-crc/server.py
+python projects/tcp-crc/client.py --message "hello"</code></pre>
+            </article>
+
+            <article class="detail-panel">
+              <p class="eyebrow">Where it fits</p>
+              <ul class="detail-list">
+                <li>Use it after parity to show a more realistic integrity-check workflow.</li>
+                <li>Trace the difference between a human-readable payload and a calculated response.</li>
+                <li>Compare its logic to the checksum demo and notes in this site.</li>
+              </ul>
+            </article>
+          </div>
+
+          <aside>
+            <article class="detail-panel">
+              <p class="eyebrow">Project facts</p>
+              <ul class="project-specs">
+                <li><strong>Protocol:</strong> TCP</li>
+                <li><strong>Polynomial:</strong> `0x07`</li>
+                <li><strong>Intent:</strong> CRC-based error detection</li>
+              </ul>
+            </article>
+
+            <article class="detail-panel">
+              <p class="eyebrow">What the card should do</p>
+              <p>
+                This card should lead to an explanatory project page for the CRC service. Linking
+                straight to the source README was the wrong target for the site surface.
+              </p>
+            </article>
+          </aside>
+        </div>
+      </div>
+    </main>
+  </body>
+</html>

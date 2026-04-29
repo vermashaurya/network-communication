@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TCP Even Parity | NetLab</title>
+    <meta
+      name="description"
+      content="Documentation page for the TCP Even Parity experiment in the NetLab repository."
+    />
+    <link rel="stylesheet" href="../styles.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="container nav">
+        <a class="brand" href="../index.html">NetLab</a>
+        <nav class="nav-links" aria-label="Primary">
+          <a href="../index.html#projects">Projects</a>
+          <a href="../index.html#workspace">Workspace</a>
+          <a href="../index.html#notes">Notes</a>
+        </nav>
+      </div>
+    </header>
+
+    <main class="page-shell">
+      <div class="container">
+        <a class="breadcrumb" href="../index.html">Home</a>
+        <section class="page-hero">
+          <p class="eyebrow">TCP experiment</p>
+          <h1>TCP Even Parity</h1>
+          <p class="page-lead">
+            A parity-checking workflow where the client can append a parity bit before sending a
+            bitstring and the server validates whether the received sequence satisfies even parity.
+          </p>
+        </section>
+
+        <div class="detail-grid">
+          <div>
+            <div class="detail-highlights">
+              <article class="detail-callout">
+                <p class="eyebrow">Client feature</p>
+                <h2>Parity-bit append</h2>
+                <p>The client can generate the extra bit needed to force an even number of ones.</p>
+              </article>
+              <article class="detail-callout">
+                <p class="eyebrow">Server role</p>
+                <h2>Validation endpoint</h2>
+                <p>The server accepts binary payloads and checks whether parity is valid.</p>
+              </article>
+            </div>
+
+            <article class="detail-panel">
+              <p class="eyebrow">Local run commands</p>
+              <pre><code>python projects/tcp-even-parity/server.py
+python projects/tcp-even-parity/client.py --data 101010 --append-parity-bit</code></pre>
+            </article>
+
+            <article class="detail-panel">
+              <p class="eyebrow">Use cases</p>
+              <ul class="detail-list">
+                <li>Introduce bit-level validation before more advanced checks such as CRC.</li>
+                <li>Compare client-side preparation with server-side verification.</li>
+                <li>Pair naturally with the browser parity demo on the homepage.</li>
+              </ul>
+            </article>
+          </div>
+
+          <aside>
+            <article class="detail-panel">
+              <p class="eyebrow">Project facts</p>
+              <ul class="project-specs">
+                <li><strong>Protocol:</strong> TCP</li>
+                <li><strong>Payload rule:</strong> binary digits only</li>
+                <li><strong>Intent:</strong> parity generation and validation</li>
+              </ul>
+            </article>
+
+            <article class="detail-panel">
+              <p class="eyebrow">What the card should do</p>
+              <p>
+                It should route to a browser-facing explanation of the TCP Even Parity project and
+                its commands. The original link bypassed the site and opened raw source docs.
+              </p>
+            </article>
+          </aside>
+        </div>
+      </div>
+    </main>
+  </body>
+</html>
