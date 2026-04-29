@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>UDP Echo | NetLab</title>
+    <meta
+      name="description"
+      content="Documentation page for the UDP Echo experiment in the NetLab repository."
+    />
+    <link rel="stylesheet" href="../styles.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="container nav">
+        <a class="brand" href="../index.html">NetLab</a>
+        <nav class="nav-links" aria-label="Primary">
+          <a href="../index.html#projects">Projects</a>
+          <a href="../index.html#workspace">Workspace</a>
+          <a href="../index.html#notes">Notes</a>
+        </nav>
+      </div>
+    </header>
+
+    <main class="page-shell">
+      <div class="container">
+        <a class="breadcrumb" href="../index.html">Home</a>
+        <section class="page-hero">
+          <p class="eyebrow">UDP experiment</p>
+          <h1>UDP Echo</h1>
+          <p class="page-lead">
+            A focused echo workflow that sends a message to the server and returns it with a
+            predictable prefix. This is the clearest starting point for understanding datagram
+            request and response behavior.
+          </p>
+        </section>
+
+        <div class="detail-grid">
+          <div>
+            <div class="detail-highlights">
+              <article class="detail-callout">
+                <p class="eyebrow">Default behavior</p>
+                <h2>Server echoes input</h2>
+                <p>Messages come back as `ECHO: &lt;message&gt;`, making round-trip checks obvious.</p>
+              </article>
+              <article class="detail-callout">
+                <p class="eyebrow">Why it matters</p>
+                <h2>Minimal network surface</h2>
+                <p>It isolates transport behavior without mixing in extra protocol concerns.</p>
+              </article>
+            </div>
+
+            <article class="detail-panel">
+              <p class="eyebrow">Workflow</p>
+              <div class="detail-steps">
+                <div class="step-card">
+                  <strong>1. Start the server</strong>
+                  <span>The server listens on localhost for datagrams.</span>
+                </div>
+                <div class="step-card">
+                  <strong>2. Send messages</strong>
+                  <span>The client can be used interactively and supports `quit` to exit.</span>
+                </div>
+              </div>
+            </article>
+
+            <article class="detail-panel">
+              <p class="eyebrow">Run locally</p>
+              <pre><code>python projects/udp-echo/server.py
+python projects/udp-echo/client.py</code></pre>
+            </article>
+          </div>
+
+          <aside>
+            <article class="detail-panel">
+              <p class="eyebrow">Project facts</p>
+              <ul class="project-specs">
+                <li><strong>Protocol:</strong> UDP</li>
+                <li><strong>Default host:</strong> `127.0.0.1:12000`</li>
+                <li><strong>Intent:</strong> echo validation and transport testing</li>
+              </ul>
+            </article>
+
+            <article class="detail-panel">
+              <p class="eyebrow">What the card should do</p>
+              <p>
+                It should route here, to a presentable project overview for UDP Echo, not to the
+                raw `README.md` file in the source tree.
+              </p>
+            </article>
+          </aside>
+        </div>
+      </div>
+    </main>
+  </body>
+</html>
